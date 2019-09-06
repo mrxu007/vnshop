@@ -80,8 +80,9 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/server/node_modules" />
+    <handled-path value="$PROJECT_DIR$/shop/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="171" />
     <option name="y" value="33" />
     <option name="width" value="1468" />
@@ -102,6 +103,11 @@
             <path>
               <item name="vnshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="vnshop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vnshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vnshop" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -179,7 +185,7 @@
       <workItem from="1567773488929" duration="116000" />
       <workItem from="1567773607682" duration="545000" />
       <workItem from="1567785748964" duration="5063000" />
-      <workItem from="1567792281149" duration="580000" />
+      <workItem from="1567792281149" duration="1126000" />
     </task>
     <task id="LOCAL-00001" summary="默认的">
       <created>1567789020632</created>
@@ -192,7 +198,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110427000" />
+    <option name="totallyTimeSpent" value="110973000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -204,7 +210,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="171" y="33" width="1468" height="822" extended-state="1" />
+    <frame x="171" y="33" width="1468" height="822" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30027547" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
