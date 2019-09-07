@@ -5,10 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/server/routes/goods.js" line="41" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31dc87bf-7f21-4db9-b0ac-4e3916e7296c" name="默认的" comment="默认的">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/shop/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="31dc87bf-7f21-4db9-b0ac-4e3916e7296c" name="默认的" comment="默认的" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -96,9 +93,9 @@
     <handled-path value="$PROJECT_DIR$/server/node_modules" />
     <handled-path value="$PROJECT_DIR$/shop/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="95" />
-    <option name="y" value="57" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="470" />
+    <option name="y" value="158" />
     <option name="width" value="1468" />
     <option name="height" value="822" />
   </component>
@@ -212,7 +209,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111339000" />
+    <option name="totallyTimeSpent" value="111431000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -225,7 +222,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="95" y="57" width="1468" height="822" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30027547" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
