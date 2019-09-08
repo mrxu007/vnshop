@@ -40,10 +40,10 @@ router.get('/list',function(req,res){
         }
     }
     let currentPage = parseInt(req.param('page'))>0 ?  parseInt(req.param('page')) : 1;
-    let pagesize = parseInt(req.param('pagesize'))>0 ? parseInt(req.param('pagesize')) : 8;
+    let pageSize = parseInt(req.param('pageSize'))>0 ? parseInt(req.param('pageSize')) : 8;
     //当分码在哪页，数据库就要跳过多少条数据
-    let skip = (currentPage -1) * pagesize;
-    let goodSort = Goods.find(param).sort({'salePrice':sort}).skip(skip).limit(pagesize);
+    let skip = (currentPage -1) * pageSize;
+    let goodSort = Goods.find(param).sort({'salePrice':sort}).skip(skip).limit(pageSize);
     goodSort.exec({},function (err,data) {
         res.json({status: 0, result:data})
     })

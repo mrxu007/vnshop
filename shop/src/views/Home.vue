@@ -43,6 +43,9 @@
                           </div>
                         </div>
                       </li>
+                      <div v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
+                        ...
+                      </div>
                     </ul>
                 </div>
             </div>
@@ -68,6 +71,10 @@ export default {
           lists : '',
           sortFlag : true,
           priceChecked : 'All',
+          page : 1,
+          pageSize : 8,
+          busy : true,
+          flag : false,
           priceFilter: [
             {
               startPrice : 0,
@@ -95,7 +102,9 @@ export default {
     Footer
   },
   created(){
+    this.page = 1;
     this.getGoods();
+
     // this.getGoodsList();
   },
   methods: {
@@ -105,20 +114,52 @@ export default {
      //          this.lists = res.data
      //      })
      // },
-     getGoods() {
+     getGoods(flag) {
        let sort = this.sortFlag ? 1 : -1;
-        axios.get('/goods/list',{params: {sort : sort,priceLevel:this.priceChecked}})
+       let params = {
+         sort : sort,
+         priceLevel:this.priceChecked,
+         page : this.page,
+         pageSize : this.pageSize
+       };
+        axios.get('/goods/list',{params : params})
           .then(res=>{
-            this.lists = res.data.result
+            let results = res.data;
+            // 判断是否是第一次请求
+            if(flag){
+              //分页数据累积在一起
+                this.lists = this.lists.concat(results.result);
+              if(results.result.length == 0){
+                this.busy = true;
+              }else{
+                this.busy = false;
+              }
+
+            }else{
+                this.lists = results.result;
+                this.busy = false;
+            }
+
           })
      },
     sortGoods() {
        this.sortFlag = !this.sortFlag;
+        this.page = 1;
        this.getGoods();
+
     },
     setPriceFilter(index){
-       this.priceChecked = index;
+        this.priceChecked = index;
+        this.page = 1;
         this.getGoods();
+
+    },
+    loadMore: function() {
+      this.busy = true;
+      setTimeout(() => {
+            this.page++;
+            this.getGoods(true);
+      }, 1000)
     }
   }
 }
