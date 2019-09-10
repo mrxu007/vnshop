@@ -1,5 +1,8 @@
 git diff  改变了哪些东西
 git merge 分支名字   合并分支的更新内容
+git branch -D 分支名字 删除本地分支
+git push origin :分支名字 删除远程分支
+
 
 
 
@@ -12,3 +15,4 @@ git merge 分支名字   合并分支的更新内容
                         添加到缓存  git add .gitignore
                         添加到本地仓库 git commit -am "更新gitignore"
                         最后面推送这个操作  就可以了
+
