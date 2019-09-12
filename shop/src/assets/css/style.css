@@ -1238,7 +1238,7 @@ a:hover {
 
 .topbar-info {
     position: relative;
-    width: 100px;
+    /*width: 100px;*/
     float: right;
     height: 100px;
     line-height: 100px;

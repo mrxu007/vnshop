@@ -17,11 +17,10 @@ module.exports = {
       //       //   }
         '/goods/*': {
             target : 'http://localhost:3000',
-            // changeOrigin: true,
-            // pathRewrite : {
-            //   '^/goods/**' : ''
-            // }
-        }
+        },
+      '/users/*': {
+        target : 'http://localhost:3000',
+      }
     },
   }
 }
