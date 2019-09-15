@@ -19,7 +19,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+// 访问拦截，所有的接口走这个逻辑
+app.use(function (req, res, next) {
+  if(req.cookies.userId){
+    next();
+  }else{
+    if(req.originalUrl == '/users/login' || req.originalUrl.indexOf('/goods/list')>-1){
+      next();
+    }else{
+      res.json({
+          status: 1,
+          msg: '当前用户未登录',
+          result: ''
+      })
+    }
+  }
+})
 app.use('/', indexRouter);
 app.use('/users',users);
 app.use('/goods',goods);

@@ -29,10 +29,11 @@
           </ul>
         </div>
         <!-- <div class="container-user"> -->
-        <div class="topbar-cart" id="ECS_CARTINFO">
-          <a class="cart-mini " href="flow.php">
-            <i class="iconfont">&#xe60c;</i> 购物车
-            <span class="mini-cart-num J_cartNum" id="hd_cartnum">(0)</span>
+        <div class="topbar-cart" id="ECS_CARTINFO" >
+          <a class="cart-mini " href="#">
+            <i class="iconfont">&#xe60c;</i>
+            <router-link to="/cartList" @click="" >购物车</router-link>
+            <span class="mini-cart-num J_cartNum" id="hd_cartnum"></span>
           </a>
         </div>
         <div class="topbar-info J_userInfo" id="ECS_MEMBERZONE">
@@ -40,6 +41,8 @@
             <el-link v-text="nickName" class="link" ></el-link>
             <span class="sep">|</span>
             <el-link  class="link" v-if="nickName"  @click="loginOut()">退出</el-link>
+
+
           </div>
 
           <div >
@@ -116,6 +119,8 @@
                     type: 'success',
                     duration: 3000
                   });
+                  this.$router.push('/');
+
                 }
               }
         })
@@ -129,8 +134,16 @@
       loginOut(){
         axios.post('/users/loginOut').then((res)=>{
             this.nickName = false
+            this.$router.push('/')
+            this.$notify({
+              title: '成功',
+              message: `用户已退出`,
+              type: 'success',
+              duration: 3000
+            });
           // console.log(res.data.result);
         })
+
       }
 
 

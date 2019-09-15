@@ -3,7 +3,7 @@
     <!--导航模块-->
     <Header/>
     <!--面包屑模块-->
-    <NavBread><span>商品111</span></NavBread>
+    <NavBread><span>商品</span></NavBread>
 
     <div class="accessory-result-page accessory-page">
       <div class="container">
@@ -41,7 +41,7 @@
                       <div class="name">{{item.productName}}</div>
                       <div class="price">{{item.salePrice}}</div>
                       <div class="btn-area">
-                        <a href="javascript:;" class="btn btn--m" @click="addCart(item.productId)">加入购物车</a>
+                        <a  class="btn btn--m" @click="addCart(item.productId)">加入购物车</a>
                       </div>
                     </div>
                   </div>
@@ -67,6 +67,7 @@
   import Header from '@/components/Header.vue'
   import NavBread from '@/components/NavBread.vue'
   import Footer from '@/components/Footer.vue'
+
   // import axios from 'axios'
   export default {
     name: 'home',
@@ -126,7 +127,7 @@
           page : this.page,
           pageSize : this.pageSize
         };
-        this.axios.get('/goods/list',{params : params})
+        this.$http.get('/goods/list',{params : params})
           .then(res=>{
             let results = res.data;
             // 判断是否是第一次请求
@@ -166,16 +167,28 @@
         }, 1000)
       },
       addCart(productId){
-        this.axios.post("/goods/addCart",{
+        this.$http.post("/goods/addCart",{
           productId : productId
         }).then(res => {
           // console.log(res);
           let result = res.data;
-
           if(result.status == 1){
-            alert('加入购物车失败')
+
+              this.$notify({
+                title: '警告',
+                message: '请先登录,再进行加入购物车操作',
+                type: 'warning',
+                duration: 2000
+              });
+
           }else{
-            alert('加入购物车成功')
+            this.$notify.success({
+              title: '信息',
+              message: '加入购物车成功',
+              showClose: false,
+              duration: 1500
+
+            });
           }
         })
       }
