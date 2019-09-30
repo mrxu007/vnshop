@@ -43,11 +43,12 @@
             <el-link  class="link" v-if="nickName"  @click="loginOut()">退出</el-link>
 
 
+
           </div>
 
           <div >
             <el-link icon="el-icon-user-solid" class="link" type="button" @click="formAll.dialogFormVisible = true" v-if="!nickName">登录</el-link>
-            <span class="sep">|</span>
+            <span class="sep" v-if="!nickName">|</span>
             <el-link  icon="el-icon-unlock" class="link" type="button" v-if="!nickName" >注册</el-link>
           </div>
 
@@ -119,8 +120,7 @@
                     type: 'success',
                     duration: 3000
                   });
-                  this.$router.push('/');
-
+                this.$router.push('/cartList')
                 }
               }
         })
@@ -132,9 +132,10 @@
         })
       },
       loginOut(){
+
         axios.post('/users/loginOut').then((res)=>{
             this.nickName = false
-            this.$router.push('/')
+          this.$router.push('/')
             this.$notify({
               title: '成功',
               message: `用户已退出`,
