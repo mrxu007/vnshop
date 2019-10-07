@@ -9,6 +9,7 @@ import orderSuccess from './views/orderSuccess.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode : 'history',
   routes: [
     {
       path: '/',
