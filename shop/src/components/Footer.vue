@@ -35,7 +35,7 @@
           <div class="blank"></div>
 
           <dl class="col-links">
-            <dt>帮助中心1111</dt>
+            <dt>帮助中心测试自动拉取</dt>
             <dd>
               <a href="article.php?id=9" target="_blank" title="配送方式" rel="nofollow">配送方式</a>
             </dd>
