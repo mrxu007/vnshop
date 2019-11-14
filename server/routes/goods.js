@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var Goods = require('../models/goods');
 var Users= require('../models/users');
 
-mongoose.connect('mongodb://132.232.252.144:27017/shop',{ useNewUrlParser: true });
+mongoose.connect('mongodb://49.233.145.162:27017/shop',{ useNewUrlParser: true });
 mongoose.connection.on('connected',function () {
     console.log('mongodb 连接成功');
 })
