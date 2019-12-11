@@ -16,7 +16,7 @@
             </li>
             <li class="nav-item">
               <a class="link" href="category.php?id=76"
-                ><span>本网站为自学学习小项目并无经营性质</span></a
+                ><span class="titleTip">本网站为自学学习小项目并无经营性质</span></a
               >
               <div class="item-children">
                 <div class="container">
@@ -174,5 +174,8 @@ export default {
 <style scoped>
 #login_form {
   width: 400px;
+}
+.titletip {
+  font-size:  35px
 }
 </style>
