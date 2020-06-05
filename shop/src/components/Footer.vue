@@ -124,12 +124,12 @@
     </div>
     <div class="site-info">
       <div class="container">
-        <div class="logo ir">小米官网</div>
+        <div class="logo ir">仿小米官网</div>
         <div class="info-text">
           <p class="sites">
           </p>
           <p>
-            ©<a href='#'>www.jsone.org</a> 京ICP证110507号 京ICP备10046444号 京公网安备1101080212535号 <a href='#'>京网文[2014]0059-0009号</a>
+           Copyright © <a href='#'>2019 徐建周（Jose）</a> <a href='www.beian.miit.gov.cn'>赣ICP备19005988号-1</a>
           </p>
         </div>
         <div class="info-links">
