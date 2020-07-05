@@ -3,7 +3,7 @@
     <div class="site-header" style="clear:both;">
       <div class="container">
         <div class="header-logo">
-          <a href="#" title="仿小米官网"
+          <a href="#" title="网站为学习小项目"
             ><img src="../assets/img/vn-logo.png"
           /></a>
         </div>
@@ -16,7 +16,7 @@
             </li>
             <li class="nav-item">
               <a class="link" href="category.php?id=76"
-                ><span class="titleTip">本网站为自学学习小项目并无经营性质</span></a
+                ><span class="titleTip">网站为学习小项目，自动上线功能已添加，账号admin密码123456</span></a
               >
               <div class="item-children">
                 <div class="container">
