@@ -16,7 +16,7 @@
             </li>
             <li class="nav-item">
               <a class="link" href="category.php?id=76"
-                ><span class="titleTip">网站为学习小项目，自动上线功能已添加，账号admin密码123456</span></a
+                ><span class="titleTip">学习项目 已添加自动更新代码功能，账号admin密码123456</span></a
               >
               <div class="item-children">
                 <div class="container">
