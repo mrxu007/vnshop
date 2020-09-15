@@ -9,9 +9,7 @@ import orderSuccess from './views/orderSuccess.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode : 'history',
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'home',
       component: Home
@@ -29,12 +27,12 @@ export default new Router({
     {
       path: '/orderConfirm',
       name: 'orderConfirm',
-      component:orderConfirm
+      component: orderConfirm
     },
     {
       path: '/orderSuccess',
       name: 'orderSuccess',
-      component:orderSuccess
+      component: orderSuccess
     },
     // {
     //   path: '/about',
